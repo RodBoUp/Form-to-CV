@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="procesar.php" method="post">
+        <p>Nombre y Apellidos: <input type="text" name="nombre_apellidos"></p>
+        <p>Fecha de Nacimiento: <input type="date" name="fecha_nacimiento"></p>
+        <p>Ocupación: <input type="text" name="ocupacion"></p>
+        <p>Contacto:</p>
+        <p>(teléfono): <input type="text" name="teléfono"></p>
+        <p>(email): <input type="text" name="email"></p>
+        <p>Nacionalidad:
+            <select name="nacionalidad">
+                <option value="Perú">Perú</option>
+                <option value="Alemania">Alemania</option>
+                <option value="Chile">Chile</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+            </select>
+        </p>
+        <p>Nivel de inglés:
+            <br/><input type="radio" id="basico" name="nivel_ingles" value="Básico">
+            <label for="Básico">Básico</label>
+            <input type="radio" id="Intermedio" name="nivel_ingles" value="Intermedio">
+            <label for="Intermedio">Intermedio</label>
+            <input type="radio" id="Avanzado" name="nivel_ingles" value="Avanzado">
+            <label for="Avanzado">Avanzado</label>
+            <input type="radio" id="Fluido" name="nivel_ingles" value="Fluido">
+            <label for="Fluido">Fluido</label>
+        </p>
+        <p>Lenguajes de programación:
+            <br/><select name="lenguajes[]" multiple>
+                <option value="C++">C++</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="PHP">PHP</option>
+                <option value="Swift">Swift</option>
+            </select>
+        </p>
+        <p>Aptitudes: <br/><input list="aptitudes" name="aptitudes"></p>
+        <datalist id="aptitudes">
+            <option value="Trabajo en equipo">
+            <option value="Comunicación">
+            <option value="Resolución de problemas">
+            <option value="Comunicación efectiva">
+            <option value="Pensamiento crítico">                   
+        </datalist>
+        <p>Habilidades:<br/> <!--<br/> salto de linea -->
+            <input type="checkbox" id="habilidad1" name="habilidades[]" value="liderazgo">
+            <label for="habilidad1">Liderazgo</label>
+            <input type="checkbox" id="habilidad2" name="habilidades[]" value="creatividad">
+            <label for="habilidad2">Creatividad</label>
+            <input type="checkbox" id="habilidad3" name="habilidades[]" value="Adaptabilidad">
+            <label for="habilidad3">Adaptabilidad</label>            
+        </p>
+        <p>Perfil: <br/><textarea name="perfil"></textarea></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
